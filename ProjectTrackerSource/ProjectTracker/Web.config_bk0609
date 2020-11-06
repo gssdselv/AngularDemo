@@ -1,0 +1,436 @@
+<?xml version="1.0"?><configuration>
+
+  <configSections>
+    <sectionGroup name="microsoft.web" type="Microsoft.Web.Configuration.MicrosoftWebSectionGroup, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <sectionGroup name="scripting" type="Microsoft.Web.Configuration.ScriptingSectionGroup, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <sectionGroup name="webServices" type="Microsoft.Web.Configuration.ScriptingWebServicesSectionGroup, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+          <section name="jsonSerialization" type="Microsoft.Web.Configuration.ScriptingJsonSerializationSection, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false"/>
+          <section name="profileService" type="Microsoft.Web.Configuration.ScriptingProfileServiceSection, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false"/>
+          <section name="authenticationService" type="Microsoft.Web.Configuration.ScriptingAuthenticationServiceSection, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false"/>
+        </sectionGroup>
+      </sectionGroup>
+    </sectionGroup>
+  </configSections>
+
+  <appSettings>
+	<add key="ApplicationVersion" value="2.0" />
+	  
+	<!-- Tamanho máximo do arquivo -->
+	<add key="MaxAttachFileSize" value="2097152" />
+
+	<!-- Quantidade máxima de anexos por projeto-->
+	<add key="MaxAttachFileCount" value="5" />
+
+	<!-- Flag para envio de email quando deletar um projeto -->
+	<add key="ActiveDeleteSendEmail" value="true" />
+	
+    <add key="PathAttachementProjects" value="../Attachs"/>
+    <add key="LDAP_PATH" value="GC://amsao001/dc=ad,dc=flextronics,dc=com"/>
+    <add key="LDAP_DOMAINUSER" value="saoskillma"/>
+    <add key="LDAP_PASS" value="SDK159!@"/>
+    <add key="ServerUrl" value="http://sacnt274/ReportServer"/>
+    
+    <!--Reporting Service  Server -->
+    <add key="ReportPath" value="Engr-Tracker"/>
+    
+    <!--Smtp Server-->
+	  <!--<add key="SmtpServer" value="AMSACEX1.americas.ad.flextronics.com"/>-->
+    <add key="SmtpServer" value="saont056.sao.flextronics.com"/>
+
+    <!--!<add key="BarChartColorsFile" value="C:\francisco\Projects\dotNET\ProjectTracker\src\dotnet\ProjectTracker\ProjectTracker\Documents\barChartColor.xml" />-->
+    <add key="CostSavingAlertValue" value="1000000.00"/>
+
+    <add key="PPTTempFolder" value="c:\temp\"/>
+    <add key="PPTTemplate" value="C:\Proyectos\FUENTES\Project Tracker\Project Tracker\Code\ProjectTracker\ProjectTracker\PowerPoint\template.ppt"/>
+    
+    <!-- Default project creater Email-->
+    <add key="DefaultEmail" value=""/>
+    <add key="ActiveSendEmail" value="true" />
+    <add key="StatusAfterClosed" value="20,22"/>
+    <add key="StatusToInsert" value="21,23"/>
+	  <add key="ReceiversClosedEmail" value="fernando.padoan@br.flextronics.com"/> <!--"murad.kurwa@flextronics.com" />-->
+    <add key="ConditionalReceiversClosedEmail" value="francisco.michelin@br.flextronics.com"/> <!--"ahmer.qasim@flextronics.com" />-->
+
+    <add key="MessageEmailProjectClose" value="Project Closed by  {0}&#xA;      &#xA;    Project Description: {1}&#xA;    Project Responsible: {2}	&#xA;&#xA;    Performance to Plan: {4}	&#xA;&#xA;    Note: For more details, click here http://intapps.flextronics.com/Engr/ProjectTracker/Pages/prjDetails.aspx?projectID={3}"/>
+    <add key="MessageEmailProject" value="A new project was Opened by  {0}&#xA;      &#xA;    Project Description: {1}&#xA;    Project Responsible: {2}	&#xA;&#xA;    Note: For more details, click here http://intapps.flextronics.com/Engr/ProjectTracker/Pages/ProjectCad.aspx?projectID={3}"/>
+    
+    <add key="FlexADURL" value="http://webservices.flextronics.com/FlexAD/V1/FlexAD.aspx?"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="d_PTConnectionString" connectionString="Data Source=saont154;Initial Catalog=ProjectTracker;User ID=ProjectTracker;Password=ProjectTracker;pooling=false;" providerName="System.Data.SqlClient"/>
+    <add name="connExcel" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Documents and Settings\saomimor\My Documents\Visual Studio 2005\Projects\ProjectTracker\ProjectTracker\bin\Projects.xls;Extended Properties=Excel 8.0;" providerName="System.Data.OleDb"/>
+  </connectionStrings>
+    <system.web>
+      
+     <!-- Please, maintain this value synchronized with MaxAttachFileSize variable. -->
+      <httpRuntime useFullyQualifiedRedirectUrl="true" maxRequestLength="2097151" executionTimeout="60"/> 
+
+      <!-- Begin MemberShip and MemberShipRole configuration -->
+      <membership defaultProvider="BaseMembershipProvider">
+        <providers>
+          <clear/>
+          <add name="BaseMembershipProvider" type="Fit.Base.BaseMembershipProvider" connectionStringName="d_PTConnectionString" applicationName="ProjectTracker" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" requiresUniqueEmail="false" passwordFormat="Hashed" minRequiredNonalphanumericCharacters="0" minRequiredPasswordLength="8"/>
+        </providers>
+      </membership>
+
+      <roleManager defaultProvider="BaseRoleProvider" enabled="true" cacheRolesInCookie="false" cookieName=".ASPROLES" cookieTimeout="30" cookiePath="/" cookieRequireSSL="false" cookieSlidingExpiration="true" cookieProtection="All">
+              <providers>
+                <clear/>
+                <add name="BaseRoleProvider" type="Fit.Base.BaseRoleProvider" connectionStringName="d_PTConnectionString" applicationName="ProjectTracker" writeExceptionsToEventLog="false"/>
+              </providers>
+            </roleManager>
+      <!-- End MemberShip and MemberShipRole configuration -->
+
+      <!-- Begin authentication and authorization -->
+      <authentication mode="Forms">
+        <forms loginUrl="Default.aspx" defaultUrl="Snapshot.aspx"/>
+      </authentication>
+      
+      <authorization>
+        <deny users="*"/>
+      </authorization>
+      <!-- End authentication and authorization -->
+      
+      <pages styleSheetTheme="Default">
+      <tagMapping>
+          <add tagType="System.Web.UI.WebControls.CompareValidator"           mappedTagType="Sample.Web.UI.Compatibility.CompareValidator, Validators, Version=1.0.0.0"/>
+          <add tagType="System.Web.UI.WebControls.CustomValidator"            mappedTagType="Sample.Web.UI.Compatibility.CustomValidator, Validators, Version=1.0.0.0"/>
+          <add tagType="System.Web.UI.WebControls.RangeValidator"             mappedTagType="Sample.Web.UI.Compatibility.RangeValidator, Validators, Version=1.0.0.0"/>
+          <add tagType="System.Web.UI.WebControls.RegularExpressionValidator" mappedTagType="Sample.Web.UI.Compatibility.RegularExpressionValidator, Validators, Version=1.0.0.0"/>
+          <add tagType="System.Web.UI.WebControls.RequiredFieldValidator"     mappedTagType="Sample.Web.UI.Compatibility.RequiredFieldValidator, Validators, Version=1.0.0.0"/>
+          <add tagType="System.Web.UI.WebControls.ValidationSummary"          mappedTagType="Sample.Web.UI.Compatibility.ValidationSummary, Validators, Version=1.0.0.0"/>
+        </tagMapping>
+       <controls>
+         <add tagPrefix="ajax" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+       </controls>       
+      </pages>
+    
+
+      <siteMap defaultProvider="XmlSiteMapProviderPT" enabled="true">
+        <providers>
+          <clear/>
+          <add name="XmlSiteMapProviderPT" description="Default SiteMap Provider" type="System.Web.XmlSiteMapProvider" siteMapFile="Web.sitemap" securityTrimmingEnabled="true"/>
+          <add name="XmlSiteMapProviderUS" description="Default SiteMap Provider" type="System.Web.XmlSiteMapProvider" siteMapFile="Weben_US.sitemap" securityTrimmingEnabled="true"/>
+        </providers>
+      </siteMap>
+        <!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.
+        -->
+      <compilation debug="true">
+        <assemblies>
+          <add assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+          <add assembly="System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+          <add assembly="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+          <add assembly="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>        
+		  <add assembly="System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/></assemblies>        
+      </compilation>
+
+      <httpHandlers>
+        <remove verb="*" path="*.asmx"/>
+        <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false"/>
+      </httpHandlers>
+      <httpModules>
+        <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      </httpModules>
+      <!--
+            The <authentication> section enables configuration 
+            of the security authentication mode used by 
+            ASP.NET to identify an incoming user. 
+        -->
+
+        <!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+
+   -->
+		<!--
+        <customErrors mode="Off" defaultRedirect="GenericErrorPage.htm">
+            <error statusCode="403" redirect="NoAccess.htm" />
+            <error statusCode="404" redirect="FileNotFound.htm" />
+        </customErrors>
+        -->
+		<customErrors mode="Off" />
+     
+      
+    </system.web>
+
+  <location path="Pages/teste.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/teste.htm">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  
+    <location path="Pages/ProjectTeste.aspx">
+    <system.web>
+    <authorization>
+    <allow roles="ADM,NOR"/>
+    <deny users="*"/>
+    </authorization>
+    </system.web>
+    </location>
+    
+
+    <location path="Pages/Attachments.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/UserRegion.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ProjectInsert.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ViewProjects.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR,GUEST"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/prjDetails.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR,GUEST"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ReportProjectView.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR,GUEST"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/SegmentCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/SavingCategoryCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/RegionCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ProjectReport.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR,GUEST"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+    <location path="App_Themes">
+      <system.web>
+        <authorization>
+          <allow users="*"/>
+        </authorization>
+      </system.web>
+    </location>
+    <location path="Images">
+      <system.web>
+        <authorization>
+          <allow users="*"/>
+        </authorization>
+      </system.web>
+    </location>
+  <location path="Web.sitemap">
+    <system.web>
+      <authorization>
+        <deny users="*"/>
+        <allow roles="ADM,NOR,GUEST"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Weben_US.sitemap">
+    <system.web>
+      <authorization>
+        <deny users="*"/>
+        <allow roles="ADM,NOR,GUEST"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Default.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ErrorPage.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+    <location path="Pages/Snapshot.aspx">
+      <system.web>
+        <authorization>
+          <allow roles="ADM,NOR,GUEST"/>
+          <deny users="*"/>
+        </authorization>
+      </system.web>
+    </location>  
+    <location path="Pages/TesteReadXLS.aspx">
+      <system.web>
+        <authorization>
+          <!--<allow roles="ADM"/>-->
+          <allow users="*"/>
+        </authorization>
+      </system.web>
+    </location>
+
+  <location path="Pages/UserCad.aspx">
+    <system.web>
+      <authorization>
+        <!--<allow roles="ADM"/>-->
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ExportToPowerPoint.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  
+    <!-- Basic Data -->
+    <location path="Pages/CategoryCad.aspx">
+      <system.web>
+        <authorization>
+          <allow roles="ADM"/>
+          <deny users="*"/>
+        </authorization>
+      </system.web>
+    </location>
+  <location path="Pages/CustomerCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/LanguageCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/LocationCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/StatusCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ResponsibleCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ProjectCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR,GUEST"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ProjectReportSummarizedByMonth.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR,GUEST"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/ProjectReportSummarizedByTrimester.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM,NOR,GUEST"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Pages/UserMaintenance.aspx">
+      <system.web>
+        <authorization>
+          <allow roles="ADM"/>
+          <deny users="*"/>
+        </authorization>
+      </system.web>
+  </location>
+  <location path="Pages/EmailExceptionsCad.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="ADM"/>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  
+</configuration>

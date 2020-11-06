@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABBREVIATION" xml:space="preserve">
+    <value>Abreviação</value>
+  </data>
+  <data name="ACTIVE" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="ADD_ANEXOS" xml:space="preserve">
+    <value>Adicionar Anexos</value>
+  </data>
+  <data name="ADD_IMAGE" xml:space="preserve">
+    <value>~/Images/Add.jpg</value>
+  </data>
+  <data name="ALL" xml:space="preserve">
+    <value>-- Todos(as) --</value>
+  </data>
+  <data name="ALL_PROJECTS" xml:space="preserve">
+    <value>Todos Projetos</value>
+  </data>
+  <data name="ALREADY_EXISTS_THIS_DESCRIPTION" xml:space="preserve">
+    <value>Já existe um item cadastrado com esta descrição.</value>
+  </data>
+  <data name="ALREADY_EXISTS_THIS_EMAIL" xml:space="preserve">
+    <value>O e-mail deste usuário já foi cadastrado</value>
+  </data>
+  <data name="ANEXOS" xml:space="preserve">
+    <value>Anexos</value>
+  </data>
+  <data name="BACK" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="CANCEL_IMAGE" xml:space="preserve">
+    <value>~/Images/Cancel.jpg</value>
+  </data>
+  <data name="CATEGORY" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="CLOSED" xml:space="preserve">
+    <value>Concluídos</value>
+  </data>
+  <data name="CLOSED_DATE" xml:space="preserve">
+    <value>Data de finalização</value>
+  </data>
+  <data name="CO_LOCATIONS" xml:space="preserve">
+    <value>Sub-Localização</value>
+  </data>
+  <data name="CO_RESPONSIBLE" xml:space="preserve">
+    <value>AME-Co-Resp.</value>
+  </data>
+  <data name="CODE" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="COMMIT_DATE" xml:space="preserve">
+    <value>Data de conclusão</value>
+  </data>
+  <data name="COST_SAVING" xml:space="preserve">
+    <value>Financial Justification</value>
+  </data>
+  <data name="COSTSAVING_ALERTMESSAGE_PART1" xml:space="preserve">
+    <value>The value of the cost saving is greater than US$</value>
+  </data>
+  <data name="COSTSAVING_ALERTMESSAGE_PART2" xml:space="preserve">
+    <value>. Are you sure you want to continue?</value>
+  </data>
+  <data name="CUSTOMER" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="DATA_INF_OPEN_DATE" xml:space="preserve">
+    <value>Data inferior a Data de Criação.</value>
+  </data>
+  <data name="DATA_INF_START_DATE" xml:space="preserve">
+    <value>Data inferior a data inicial</value>
+  </data>
+  <data name="DATE_HEADER" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="DATE_REQUIRED" xml:space="preserve">
+    <value>Data é obrigatória.</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="DELETE_CONFIRM" xml:space="preserve">
+    <value>return confirm('Você realmente deseja excluir este projeto?');</value>
+  </data>
+  <data name="DELETE_IMAGE" xml:space="preserve">
+    <value>~/Images/Delete.jpg</value>
+  </data>
+  <data name="DELETED_ERROR" xml:space="preserve">
+    <value>Ocorreu um erro inesperado ao tentar excluir este registro.</value>
+  </data>
+  <data name="DELETED_SUCESS" xml:space="preserve">
+    <value>Registro excluído com sucesso.</value>
+  </data>
+  <data name="DESCRIPTION" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="DETAIL_PROJECT" xml:space="preserve">
+    <value>Detalhes do Projeto</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="EDIT_IMAGE" xml:space="preserve">
+    <value>~/Images/Edit.jpg</value>
+  </data>
+  <data name="EMAIL" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ENDDATE" xml:space="preserve">
+    <value>Data Final</value>
+  </data>
+  <data name="ENGLISH" xml:space="preserve">
+    <value>Inglês</value>
+  </data>
+  <data name="EXAMPLE_OF_COST_SAVINGS" xml:space="preserve">
+    <value>Exemplos de Cost Saving ou Avoidance</value>
+  </data>
+  <data name="EXPECTED_SIZE_MAX" xml:space="preserve">
+    <value>O tamanho do arquivo excedeu à 2MB.</value>
+  </data>
+  <data name="EXPRESSION_NUMBER" xml:space="preserve">
+    <value>[0-9]+[,][0-9]*[0-9]*</value>
+  </data>
+  <data name="FILE_COUNT_EXCEEDED" xml:space="preserve">
+    <value>O número máximo de arquivos permitidos já foi inserido.</value>
+  </data>
+  <data name="FILTER" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="FILTER_BY" xml:space="preserve">
+    <value>Filtrar por</value>
+  </data>
+  <data name="FILTER_HIDDEN" xml:space="preserve">
+    <value>Ocultar Filtro</value>
+  </data>
+  <data name="FILTER_SHOW" xml:space="preserve">
+    <value>Filtro ...</value>
+  </data>
+  <data name="FINISH_IMAGE" xml:space="preserve">
+    <value>~/Images/Finish.jpg</value>
+  </data>
+  <data name="FORMAT_DATE" xml:space="preserve">
+    <value>DD/MM/YYYY</value>
+  </data>
+  <data name="FORMAT_INVALID" xml:space="preserve">
+    <value>Formato Inválido</value>
+  </data>
+  <data name="GENERATE_REPORT" xml:space="preserve">
+    <value>Gerar Relatório</value>
+  </data>
+  <data name="GET_ALL" xml:space="preserve">
+    <value>Buscar Todos</value>
+  </data>
+  <data name="INSERT" xml:space="preserve">
+    <value>Inserir</value>
+  </data>
+  <data name="INSERT_IMAGE" xml:space="preserve">
+    <value>~/Images/Insert.jpg</value>
+  </data>
+  <data name="INSERT_NEW_PROJECT" xml:space="preserve">
+    <value>Para inserir um registro clique no botão abaixo.</value>
+  </data>
+  <data name="INSERTED_ERROR" xml:space="preserve">
+    <value>Ocorreu um erro inesperado ao tentar inserir este registro.</value>
+  </data>
+  <data name="INSERTED_SUCESS" xml:space="preserve">
+    <value>Registro inserido com sucesso.</value>
+  </data>
+  <data name="INVALID_FILE" xml:space="preserve">
+    <value>Arquivo inválido</value>
+  </data>
+  <data name="IS_ADMIN" xml:space="preserve">
+    <value>Admin.</value>
+  </data>
+  <data name="LANGUAGE" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="LAST_LOGIN" xml:space="preserve">
+    <value>Último Login</value>
+  </data>
+  <data name="LOCATION" xml:space="preserve">
+    <value>Localização</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="NEW" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="NEW_IMAGE" xml:space="preserve">
+    <value>~/Images/New.jpg</value>
+  </data>
+  <data name="NEW_ITEM" xml:space="preserve">
+    <value>Inserir um novo item</value>
+  </data>
+  <data name="NEXT_IMAGE" xml:space="preserve">
+    <value>~/Images/Next.jpg</value>
+  </data>
+  <data name="NOPROJECTS" xml:space="preserve">
+    <value>Nenhum projeto foi encontrado para o filtro selecionado. \nPor favor altere o filtro e tente novamente.</value>
+  </data>
+  <data name="NOT_ACCESS" xml:space="preserve">
+    <value>Desculpe mas você não possue permissão para acessar o sistema. Favor contatar o administrador do sistema.</value>
+  </data>
+  <data name="OPEN" xml:space="preserve">
+    <value>Criados</value>
+  </data>
+  <data name="OPEN_DATE" xml:space="preserve">
+    <value>Data de criação</value>
+  </data>
+  <data name="OTHERS_RESPONSIBLES" xml:space="preserve">
+    <value>Outros Responsibles</value>
+  </data>
+  <data name="PENDING" xml:space="preserve">
+    <value>Pendente</value>
+  </data>
+  <data name="PERCENT_COMPLETION" xml:space="preserve">
+    <value>Progresso %</value>
+  </data>
+  <data name="PORTUGUESE" xml:space="preserve">
+    <value>Português</value>
+  </data>
+  <data name="PREVIOUS_IMAGE" xml:space="preserve">
+    <value>~/Images/Previous.jpg</value>
+  </data>
+  <data name="PROJECT" xml:space="preserve">
+    <value>Projeto</value>
+  </data>
+  <data name="RECORD_RELATION_DELETE" xml:space="preserve">
+    <value>Existe um documento relacionado ao registro a ser excluído,  portanto esta operação foi cancelada.</value>
+  </data>
+  <data name="RECORD_RELATION_UPDATE" xml:space="preserve">
+    <value>Existe um documento relacionado ao registro a ser atualizado, portanto esta operação foi cancelada.</value>
+  </data>
+  <data name="REGION" xml:space="preserve">
+    <value>Região</value>
+  </data>
+  <data name="REGION_CODE" xml:space="preserve">
+    <value>Cadastro de Regiões</value>
+  </data>
+  <data name="REMARKS" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="REMOVE_IMAGE" xml:space="preserve">
+    <value>~/Images/Remove.jpg</value>
+  </data>
+  <data name="REPORT_TYPE" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+  <data name="REQUIRED_END_DATE" xml:space="preserve">
+    <value>Data final obrigatória</value>
+  </data>
+  <data name="REQUIRED_START_DATE" xml:space="preserve">
+    <value>Data inicial obrigatória</value>
+  </data>
+  <data name="RESPONSIBLE" xml:space="preserve">
+    <value>Responsável</value>
+  </data>
+  <data name="RESPONSIBLES" xml:space="preserve">
+    <value>Responsáveis</value>
+  </data>
+  <data name="SAVE_IMAGE" xml:space="preserve">
+    <value>~/Images/Save.jpg</value>
+  </data>
+  <data name="SAVING_AMOUNT" xml:space="preserve">
+    <value>Quantidade Economia</value>
+  </data>
+  <data name="SAVING_AMOUNT_HEADER" xml:space="preserve">
+    <value>Valor da Economia $USD</value>
+  </data>
+  <data name="SAVING_AMOUNT_INVALID" xml:space="preserve">
+    <value>Valor da Economia inválido.</value>
+  </data>
+  <data name="SAVING_AMOUNT_REQUIRED" xml:space="preserve">
+    <value>Valor da Economia é obrigatório.</value>
+  </data>
+  <data name="SAVING_CATEGORY" xml:space="preserve">
+    <value>Categoria de Economia</value>
+  </data>
+  <data name="SAVING_CATEGORY_HEADER" xml:space="preserve">
+    <value>Categoria de Economia</value>
+  </data>
+  <data name="SAVING_CATEGORY_REQUIRED" xml:space="preserve">
+    <value>Categoria de Economia é obrigatório.</value>
+  </data>
+  <data name="SAVING_TYPE" xml:space="preserve">
+    <value>Tipo de Economia</value>
+  </data>
+  <data name="SAVING_TYPE_HEADER" xml:space="preserve">
+    <value>Tipo de Economia</value>
+  </data>
+  <data name="SAVING_TYPE_REQUIRED" xml:space="preserve">
+    <value>Tipo de Economia é obrigatório.</value>
+  </data>
+  <data name="SAVINGCATEGORY" xml:space="preserve">
+    <value>Categoria da Economia</value>
+  </data>
+  <data name="SEARCH_PROJECT" xml:space="preserve">
+    <value>Filtrar projetos</value>
+  </data>
+  <data name="SEGMENT" xml:space="preserve">
+    <value>Segmento</value>
+  </data>
+  <data name="SELECT" xml:space="preserve">
+    <value>Selecionar</value>
+  </data>
+  <data name="SELECT_A_ITEM" xml:space="preserve">
+    <value>Selecione um item</value>
+  </data>
+  <data name="SELECT_MANY_LISTBOX" xml:space="preserve">
+    <value>(Para selecionar mais de um, use Control / Shift)</value>
+  </data>
+  <data name="SITE_CODE" xml:space="preserve">
+    <value>Site Code</value>
+  </data>
+  <data name="SITEMAPKEY" xml:space="preserve">
+    <value>XmlSiteMapProviderPT</value>
+  </data>
+  <data name="STARTDATE" xml:space="preserve">
+    <value>Data Inicial</value>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="TAG" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="TITLE_CATEGORY" xml:space="preserve">
+    <value>Cadastro de Categoria</value>
+  </data>
+  <data name="TITLE_CUSTOMER" xml:space="preserve">
+    <value>Cadastro de Clientes</value>
+  </data>
+  <data name="TITLE_EMAIL_EXCEPTIONS" xml:space="preserve">
+    <value>Cadastro de Exceções de E-mail</value>
+  </data>
+  <data name="TITLE_LOCATION" xml:space="preserve">
+    <value>Cadastro de Localização</value>
+  </data>
+  <data name="TITLE_PROJECTS" xml:space="preserve">
+    <value>Cadastro de Projetos</value>
+  </data>
+  <data name="TITLE_RESPONSIBLES" xml:space="preserve">
+    <value>Cadastro de Responsáveis</value>
+  </data>
+  <data name="TITLE_SAVING_CATEGORY" xml:space="preserve">
+    <value>Cadastro de Saving Categorie</value>
+  </data>
+  <data name="TITLE_SEGMENT" xml:space="preserve">
+    <value>Cadastro de Segmentos</value>
+  </data>
+  <data name="TITLE_STATUS" xml:space="preserve">
+    <value>Cadastro de Status</value>
+  </data>
+  <data name="TITLE_USER_REGION" xml:space="preserve">
+    <value>Adiconar Região</value>
+  </data>
+  <data name="TITLE_USERS" xml:space="preserve">
+    <value>Cadastro de Usuários</value>
+  </data>
+  <data name="TOO_MUCH_PROJECTS" xml:space="preserve">
+    <value>Existem {0} projetos para serem exportados. O sistema não suporta mais que 30 projetos. Por favor altere o range de data e tente novamente.</value>
+  </data>
+  <data name="UPDATE" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="UPDATED_ERROR" xml:space="preserve">
+    <value>Ocorreu um erro inesperado ao tentar atualizar este registro.</value>
+  </data>
+  <data name="UPDATED_SUCESS" xml:space="preserve">
+    <value>Registro alterado com sucesso.</value>
+  </data>
+  <data name="USER_ALREADY_EXISTS" xml:space="preserve">
+    <value>Este username já foi cadastrado.</value>
+  </data>
+  <data name="USER_INVALID" xml:space="preserve">
+    <value>Usuário inválido</value>
+  </data>
+  <data name="USER_REGION" xml:space="preserve">
+    <value>Usuário X Região</value>
+  </data>
+  <data name="USERNAME" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="USERNAME_AD" xml:space="preserve">
+    <value>AD User</value>
+  </data>
+  <data name="VIEW_PROJECTS" xml:space="preserve">
+    <value>Visualizar Projetos</value>
+  </data>
+  <data name="WELCOME" xml:space="preserve">
+    <value>Bem-Vindo ao Project Tracker</value>
+  </data>
+  <data name="YEAR" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="YOU_ARENT_RESPONSIBLE" xml:space="preserve">
+    <value>A inserção de projetos somente é permitida por usuários com o perfil de responsável.</value>
+  </data>
+  <data name="YOUR_PROJECTS" xml:space="preserve">
+    <value>Seus Projetos</value>
+  </data>
+  <data name="REVENUE" xml:space="preserve">
+    <value>Revenue</value>
+  </data>
+  <data name="REVENUE_COSTSAVING" xml:space="preserve">
+    <value>Revenue / Cost Saving</value>
+  </data>
+  <data name="PERIOD" xml:space="preserve">
+    <value>Periodo</value>
+  </data>
+  <data name="BULEAD" xml:space="preserve">
+    <value>Site / BU Lead</value>
+  </data>
+  <data name="CAPEX_PO_APPROVAL" xml:space="preserve">
+    <value>Não é possível alterar fase de Definir a Desenvolver</value>
+  </data>
+  <data name="CAPEX_APPROVAL" xml:space="preserve">
+    <value>Capex should be approved for saving the project in Develop and Deploy stage</value>
+  </data>
+  <data name="PO_APPROVAL" xml:space="preserve">
+    <value>PO should be issued for saving the project in Develop and Deploy stage</value>
+  </data>
+  <data name="CAPEX_DATE" xml:space="preserve">
+    <value>PO Issued Date</value>
+  </data>
+  <data name="COST_SAVING_MSG" xml:space="preserve">
+    <value>Please select atleast one Automation Saving Type</value>
+  </data>
+  <data name="COST_SAVING_REQUIRED" xml:space="preserve">
+    <value>Financial Justification is required before closing the Automation Project</value>
+  </data>
+  <data name="COST_SAVING_MATCH" xml:space="preserve">
+    <value>Planned savings should equal the sum of itemized savings (HC savings + Throughput savings + … etc) from your ROI tool</value>
+  </data>
+</root>

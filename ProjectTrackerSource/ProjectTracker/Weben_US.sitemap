@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Default.aspx" title="Home"  description="" roles="ADM,NOR,GUEST">
+      <siteMapNode url="#" title="Maintenance"  description="" roles="ADM">
+        <siteMapNode url="Pages/RegionCad.aspx" title="Region"  description="" roles="*"/>
+        <siteMapNode url="Pages/CategoryCad.aspx" title="Category"  description=""  roles="ADM"/>
+        <siteMapNode url="Pages/CustomerCad.aspx" title="Customer"  description=""  roles="ADM"/>
+        <!--<siteMapNode url="Pages/LanguageCad.aspx" title="Maintenance Language"  description=""  roles="ADM"/>-->
+        <siteMapNode url="Pages/LocationCad.aspx" title="Location"  description=""  roles="ADM"/>
+        <siteMapNode url="Pages/SavingCategoryCad.aspx" title="Saving Category"  description="" roles="ADM"/>
+        <siteMapNode url="Pages/EmailExceptionsCad.aspx" title="E-mail Exceptions"  description="" roles="ADM"/>
+        <siteMapNode url="Pages/SegmentCad.aspx" title="Segment"  description="" roles="ADM"/>
+        <!--<siteMapNode url="Pages/StatusCad.aspx" title="Status"  description=""  roles="ADM"/>-->
+        <!--<siteMapNode url="Pages/UserCad.aspx" title="User"  description="" roles="ADM"/>-->
+        <!--<siteMapNode url="Pages/ResponsibleCad.aspx" title="Responsible"  description="" roles="ADM"/>-->
+        <siteMapNode url="Pages/UserMaintenance.aspx" title="User" description="" roles="ADM" />
+        <siteMapNode url="Pages/GroupMaintenance.aspx" title="Group" description="" roles="ADM" />
+      </siteMapNode>
+        <siteMapNode url="#1" title="Project"  description="" roles="ADM,NOR,GUEST">
+          <siteMapNode url="Pages/ProjectInsert.aspx" title="Insert Project"  description="" roles="ADM,NOR"/>
+          <siteMapNode url="Pages/ProjectCad.aspx" title="Project Tracker"  description="" roles="ADM,NOR,GUEST"/>
+          <siteMapNode url="Pages/ProjectReport.aspx" title="Reports"  description="" roles="ADM,NOR,GUEST"/>          
+        </siteMapNode>
+      <siteMapNode url="#2" title="Dashboard"  description="" roles="ADM">       
+        <siteMapNode url="Pages/SummaryDashboard.aspx" title="Summary Tracker"  description="" roles="ADM"/>
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

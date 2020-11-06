@@ -1,0 +1,5 @@
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Converter\bin\Debug\Converter.exe
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Converter\bin\Debug\Converter.pdb
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Converter\obj\Debug\Converter.csprojAssemblyReference.cache
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Converter\obj\Debug\Converter.exe
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Converter\obj\Debug\Converter.pdb

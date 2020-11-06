@@ -1,0 +1,12 @@
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Library.dll.config
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Library.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Library.pdb
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\log4net.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Microsoft.Practices.Unity.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\bin\Release\Microsoft.Practices.Unity.Interception.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\obj\Release\Library.csproj.CopyComplete
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\obj\Release\Library.dll
+C:\TFSCorpProjects\Project Tracker\ProjectTrackerSource\Library\obj\Release\Library.pdb

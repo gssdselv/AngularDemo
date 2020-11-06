@@ -1,0 +1,66 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:Label runat="server" ForeColor="#666666" />
+
+<asp:LinkButton runat="server" ForeColor="#396EAA" />
+
+<asp:Label SkinID="Title" runat="server" Font-Bold="True" Font-Size="10pt" ForeColor="#002A5C" BackColor="#BBBBBB" Width="100%" CssClass="title"/>
+ 
+<asp:GridView runat="server" CellPadding="3" BorderWidth="0px" CellSpacing="0" Width="100%" AllowPaging="True" PageSize="5" SelectedIndex="0" >
+    <RowStyle BackColor="#F9FAFB" Height="20px" ForeColor="#666666" HorizontalAlign="Left" />
+    <SelectedRowStyle BackColor="#FFFFE5" Height="20px" ForeColor="#666666" />
+    <HeaderStyle BackColor="#E6E6E6" Height="20px" ForeColor="#666666" HorizontalAlign="Left"/>
+    <PagerStyle BackColor="#E6E6E6" />
+    <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="First" LastPageText="Last" NextPageText="Next" PreviousPageText="Previous"/>
+</asp:GridView>
+<asp:GridView SkinId="GridViewMorePagging" runat="server" CellPadding="3" BorderWidth="0px" CellSpacing="0" Width="100%" AllowPaging="True" PageSize="25" SelectedIndex="0" >
+    <RowStyle BackColor="#F9FAFB" Height="20px" ForeColor="#666666" HorizontalAlign="Left" />
+    <SelectedRowStyle BackColor="#FFFFE5" Height="20px" ForeColor="#666666" />
+    <HeaderStyle BackColor="#E6E6E6" Height="20px" ForeColor="#666666" HorizontalAlign="Left"/>
+    <PagerStyle BackColor="#E6E6E6" />
+    <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="First" LastPageText="Last" NextPageText="Next" PreviousPageText="Previous"/>
+</asp:GridView>
+<asp:GridView SkinId="GridViewForShareNet" runat="server" CellPadding="3" BorderWidth="0px" CellSpacing="0" Width="100%" AllowPaging="True" PageSize="30" SelectedIndex="0" >
+    <RowStyle BackColor="#F9FAFB" Height="20px" ForeColor="#666666" HorizontalAlign="Left" />
+    <HeaderStyle BackColor="#E6E6E6" Height="20px" ForeColor="#666666" HorizontalAlign="Left"/>
+    <PagerStyle BackColor="#E6E6E6" />
+    <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="First" LastPageText="Last" NextPageText="Next" PreviousPageText="Previous"/>
+</asp:GridView>
+
+
+
+
+
+<asp:DetailsView runat="server" CellSpacing="1"  Width="100%" AutoGenerateRows="False" CellPadding="2" BorderWidth="0px"  HeaderText=" " BackColor="#F1F1F1">
+    <HeaderStyle BackColor="#E6E6E6" Height="24px"  Width="100%" ForeColor="#E6E6E6" />
+    <FieldHeaderStyle BackColor="#E6E6E6" Font-Bold="True" Width="210px" ForeColor="#666666"  HorizontalAlign="Left"  />
+    <CommandRowStyle BackColor="#E6E6E6" Font-Bold="True" Width="100%" HorizontalAlign="Center" />
+    <RowStyle Height="20" BackColor="#FFFFFF" Width="600px" HorizontalAlign="Left" />    
+    <PagerStyle Height="20" BackColor="#FFFFFF" />
+</asp:DetailsView>
+
+<asp:FormView runat="server" AutoGenerateRows="False" Width="100%" />
+
+<asp:Wizard runat="server" Width="100%">
+    <StepStyle VerticalAlign="Top" />
+    <SideBarStyle VerticalAlign="Top" Width="100px" />
+</asp:Wizard>
+
+<asp:DropDownList runat="server" BorderWidth="1px" Font-Names="Verdana" Font-Size="8pt"/>
+<asp:TextBox runat="server" Font-Names="Verdana" Font-Size="8pt" Width="200px" BorderWidth="1px" />
+<asp:TextBox runat="server" Font-Names="Verdana" Font-Size="8pt" Width="200px" BorderWidth="1px" SkinId="txtActual"/>
+

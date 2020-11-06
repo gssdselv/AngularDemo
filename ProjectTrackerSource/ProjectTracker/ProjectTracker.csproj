@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1D25685-32C4-4CA1-A51B-46024BF6E874}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectTracker</RootNamespace>
+    <AssemblyName>ProjectTracker</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>true</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\packages\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\packages\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <HintPath>..\packages\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <HintPath>Lib\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportViewer, Version=1.0.2083.17892, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ReportViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Validators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Validators.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Default.css" />
+    <Content Include="Common\ActualDate.ascx" />
+    <Content Include="Common\functions.js" />
+    <Content Include="Common\InsertButtons.ascx" />
+    <Content Include="Common\ItemTemplateButtons.ascx" />
+    <Content Include="Common\MessagePanel.ascx" />
+    <Content Include="Common\SelectGridTemplate.ascx" />
+    <Content Include="Common\UpdateButtons.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\Add.jpg" />
+    <Content Include="Images\background_addhours.jpg" />
+    <Content Include="Images\background_body.gif" />
+    <Content Include="Images\background_calendar.gif" />
+    <Content Include="Images\background_drop_menu.jpg" />
+    <Content Include="Images\background_formsection.gif" />
+    <Content Include="Images\background_main.jpg" />
+    <Content Include="Images\btn_16x16_find.jpg" />
+    <Content Include="Images\btn_find.gif" />
+    <Content Include="Images\Cancel.jpg" />
+    <Content Include="Images\checkNo.png" />
+    <Content Include="Images\checkYes.png" />
+    <Content Include="Images\Delete.jpg" />
+    <Content Include="Images\Edit.jpg" />
+    <Content Include="Images\Finish.jpg" />
+    <Content Include="Images\Insert.jpg" />
+    <Content Include="Images\msn_busy.gif" />
+    <Content Include="Images\New.jpg" />
+    <Content Include="Images\Next.jpg" />
+    <Content Include="Images\open.gif" />
+    <Content Include="Images\Previous.jpg" />
+    <Content Include="Images\PT Logo.png" />
+    <Content Include="Images\Remove.jpg" />
+    <Content Include="Images\Save.jpg" />
+    <Content Include="Images\Spinner.gif" />
+    <Content Include="Images\status-blue.gif" />
+    <Content Include="Images\status-green.gif" />
+    <Content Include="Images\status-yellow.gif" />
+    <Content Include="Images\tab.gif" />
+    <Content Include="Images\tab_bg.gif" />
+    <Content Include="Images\tab_dim.gif" />
+    <Content Include="Images\timesheet_data_bg.gif" />
+    <Content Include="Images\time_tracker_logo.gif" />
+    <Content Include="Lib\AjaxControlToolkit.dll" />
+    <Content Include="Lib\log4net.dll" />
+    <Content Include="Lib\Microsoft.Office.Interop.PowerPoint.dll" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Lib\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="Lib\Office.dll" />
+    <Content Include="Lib\ReportViewer.dll" />
+    <Content Include="Lib\Validators.dll" />
+    <Content Include="Pages\CategoryCad.aspx" />
+    <Content Include="Pages\checkNo.png" />
+    <Content Include="Pages\checkYes.png" />
+    <Content Include="Pages\CustomerCad.aspx" />
+    <Content Include="Pages\ErrorPage.aspx" />
+    <Content Include="Pages\GroupMaintenance.aspx" />
+    <Content Include="Pages\LanguageCad.aspx" />
+    <Content Include="Pages\LocationCad.aspx" />
+    <Content Include="Pages\prjDetails.aspx" />
+    <Content Include="Pages\ProjectInsert.aspx" />
+    <Content Include="Pages\ProjectReport.aspx" />
+    <Content Include="Pages\ProjectResponsibles.aspx" />
+    <Content Include="Pages\ProjectsForShareNet.aspx" />
+    <Content Include="Pages\ResponsibleCad.aspx" />
+    <Content Include="Pages\SegmentCad.aspx" />
+    <Content Include="Pages\SnapShot.aspx" />
+    <Content Include="Pages\status-green.gif" />
+    <Content Include="Pages\status-yellow.gif" />
+    <Content Include="Pages\StatusCad.aspx" />
+    <Content Include="Pages\SummaryDashboard.aspx" />
+    <Content Include="Pages\TesteReadXLS.aspx" />
+    <Content Include="Pages\UserCad.aspx" />
+    <Content Include="Pages\ViewProjects.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Default.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Default.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Default.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Default.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Default.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Default.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseMembershipProvider.cs" />
+    <Compile Include="Base\BaseMembershipUser.cs" />
+    <Compile Include="Base\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\BaseRoleProvider.cs" />
+    <Compile Include="Business\AutomationSavings.cs" />
+    <Compile Include="Business\CostSavingDataSource.cs" />
+    <Compile Include="Business\Group.cs" />
+    <Compile Include="Business\Project.cs" />
+    <Compile Include="Business\Requirement.cs" />
+    <Compile Include="Business\User.cs" />
+    <Compile Include="Common\ActualDate.ascx.cs">
+      <DependentUpon>ActualDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ActualDate.ascx.designer.cs">
+      <DependentUpon>ActualDate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ActualDateTextBox.cs" />
+    <Compile Include="Common\CheckmarxHelper.cs" />
+    <Compile Include="Common\DropDownCalendar.ascx.cs">
+      <DependentUpon>DropDownCalendar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DropDownCalendar.ascx.designer.cs">
+      <DependentUpon>DropDownCalendar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\InsertButtons.ascx.cs">
+      <DependentUpon>InsertButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\InsertButtons.ascx.designer.cs">
+      <DependentUpon>InsertButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ItemTemplateButtons.ascx.cs">
+      <DependentUpon>ItemTemplateButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ItemTemplateButtons.ascx.designer.cs">
+      <DependentUpon>ItemTemplateButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MessagePanel.ascx.cs">
+      <DependentUpon>MessagePanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\MessagePanel.ascx.designer.cs">
+      <DependentUpon>MessagePanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProgressBar.ascx.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProgressBar.ascx.designer.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SelectGridTemplate.ascx.cs">
+      <DependentUpon>SelectGridTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SelectGridTemplate.ascx.designer.cs">
+      <DependentUpon>SelectGridTemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UpdateButtons.ascx.cs">
+      <DependentUpon>UpdateButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UpdateButtons.ascx.designer.cs">
+      <DependentUpon>UpdateButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="DAO\dtsProjectTracker.cs">
+      <DependentUpon>dtsProjectTracker.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\dtsProjectTracker1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsProjectTracker.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Attachments.aspx.cs">
+      <DependentUpon>Attachments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Attachments.aspx.designer.cs">
+      <DependentUpon>Attachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CategoryCad.aspx.cs">
+      <DependentUpon>CategoryCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CategoryCad.aspx.designer.cs">
+      <DependentUpon>CategoryCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerCad.aspx.cs">
+      <DependentUpon>CustomerCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CustomerCad.aspx.designer.cs">
+      <DependentUpon>CustomerCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExportToPowerPoint.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExportToPowerPoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExportToPowerPoint.aspx.designer.cs">
+      <DependentUpon>ExportToPowerPoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GroupMaintenance.aspx.cs">
+      <DependentUpon>GroupMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GroupMaintenance.aspx.designer.cs">
+      <DependentUpon>GroupMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LanguageCad.aspx.cs">
+      <DependentUpon>LanguageCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LanguageCad.aspx.designer.cs">
+      <DependentUpon>LanguageCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LocationCad.aspx.cs">
+      <DependentUpon>LocationCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LocationCad.aspx.designer.cs">
+      <DependentUpon>LocationCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\prjDetails.aspx.cs">
+      <DependentUpon>prjDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\prjDetails.aspx.designer.cs">
+      <DependentUpon>prjDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjectInsert.aspx.cs">
+      <DependentUpon>ProjectInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjectInsert.aspx.designer.cs">
+      <DependentUpon>ProjectInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjectReport.aspx.cs">
+      <DependentUpon>ProjectReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjectReport.aspx.designer.cs">
+      <DependentUpon>ProjectReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjectResponsibles.aspx.cs">
+      <DependentUpon>ProjectResponsibles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjectResponsibles.aspx.designer.cs">
+      <DependentUpon>ProjectResponsibles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjectsForShareNet.aspx.cs">
+      <DependentUpon>ProjectsForShareNet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjectsForShareNet.aspx.designer.cs">
+      <DependentUpon>ProjectsForShareNet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ResponsibleCad.aspx.cs">
+      <DependentUpon>ResponsibleCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ResponsibleCad.aspx.designer.cs">
+      <DependentUpon>ResponsibleCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SegmentCad.aspx.cs">
+      <DependentUpon>SegmentCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SegmentCad.aspx.designer.cs">
+      <DependentUpon>SegmentCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SnapShot.aspx.cs">
+      <DependentUpon>SnapShot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SnapShot.aspx.designer.cs">
+      <DependentUpon>SnapShot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StatusCad.aspx.cs">
+      <DependentUpon>StatusCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\StatusCad.aspx.designer.cs">
+      <DependentUpon>StatusCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SummaryDashboard.aspx.cs">
+      <DependentUpon>SummaryDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SummaryDashboard.aspx.designer.cs">
+      <DependentUpon>SummaryDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TesteReadXLS.aspx.cs">
+      <DependentUpon>TesteReadXLS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TesteReadXLS.aspx.designer.cs">
+      <DependentUpon>TesteReadXLS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserCad.aspx.cs">
+      <DependentUpon>UserCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserCad.aspx.designer.cs">
+      <DependentUpon>UserCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserMaintenance.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserMaintenance.aspx.designer.cs">
+      <DependentUpon>UserMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserRegion.aspx.cs">
+      <DependentUpon>UserRegion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserRegion.aspx.designer.cs">
+      <DependentUpon>UserRegion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewProjects.aspx.cs">
+      <DependentUpon>ViewProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewProjects.aspx.designer.cs">
+      <DependentUpon>ViewProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjectCad.aspx.cs">
+      <DependentUpon>ProjectCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjectCad.aspx.designer.cs">
+      <DependentUpon>ProjectCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegionCad.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>RegionCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegionCad.aspx.designer.cs">
+      <DependentUpon>RegionCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="DAO\SQLDBHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Default.en-US.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Default.en-US.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Default.pt-BR.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Default.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Default.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Default.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Default.skin" />
+    <Content Include="App_Browsers\ie.browser" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DAO\dtsProjectTracker.xsc">
+      <DependentUpon>dtsProjectTracker.xsd</DependentUpon>
+    </Content>
+    <None Include="DAO\dtsProjectTracker.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsProjectTracker1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Common\DropDownCalendar.ascx" />
+    <Content Include="Common\ProgressBar.ascx" />
+    <Content Include="Common\standard.js" />
+    <Content Include="Documents\barChartColor.xml" />
+    <Content Include="Images\Add.png" />
+    <Content Include="Images\exampleSavingCost.JPG" />
+    <Content Include="Images\help.gif" />
+    <Content Include="Images\help.jpg" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\btnClose.jpg" />
+    <Content Include="Images\btn_16x16_attach.gif" />
+    <Content Include="Images\btn_16x16_attach.jpg" />
+    <Content Include="Images\btn_16x16_edit.jpg" />
+    <Content Include="Images\build.gif" />
+    <Content Include="Images\button_cancel.gif" />
+    <Content Include="Images\button_save.gif" />
+    <Content Include="Images\camera_test.gif" />
+    <Content Include="Images\cancel.gif" />
+    <Content Include="Images\ClearCalendar.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\down.gif" />
+    <Content Include="Images\EditProject.gif" />
+    <Content Include="Images\eraser.gif" />
+    <Content Include="Images\filenew.gif" />
+    <Content Include="Images\greenled.gif" />
+    <Content Include="Images\imgProjectTracker.jpg" />
+    <Content Include="Images\imgProjectTracker.png" />
+    <Content Include="Images\imgProjectTracker_NEW.jpg" />
+    <Content Include="Images\left.jpg" />
+    <Content Include="Images\list.gif" />
+    <Content Include="Images\lock.gif" />
+    <Content Include="Images\misc.gif" />
+    <Content Include="Images\picHands.jpg" />
+    <Content Include="Images\picMainBack.jpg" />
+    <Content Include="Images\ppt.png" />
+    <Content Include="Images\redled.gif" />
+    <Content Include="Images\ShowCalendar.gif" />
+    <Content Include="Images\Right.jpg" />
+    <Content Include="Images\up.gif" />
+    <Content Include="Images\Update.gif" />
+    <Content Include="Images\waiting.gif" />
+    <Content Include="Images\yellowled.gif" />
+    <Content Include="Pages\Attachments.aspx" />
+    <Content Include="Pages\EmailExceptionsCad.aspx" />
+    <Content Include="Pages\SavingCategoryCad.aspx" />
+    <Content Include="Dashboard\CostSavingsTracker.swf" />
+    <Content Include="Dashboard\dashboard.htm" />
+    <Content Include="Pages\ExportToPowerPoint.aspx" />
+    <Content Include="Pages\MasterPage.Master" />
+    <Content Include="DAO\dtsProjectTracker.xss">
+      <DependentUpon>dtsProjectTracker.xsd</DependentUpon>
+    </Content>
+    <None Include="Database Scripts\change_script.sql" />
+    <Compile Include="Pages\EmailExceptionsCad.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EmailExceptionsCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmailExceptionsCad.aspx.designer.cs">
+      <DependentUpon>EmailExceptionsCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SavingCategoryCad.aspx.cs">
+      <DependentUpon>SavingCategoryCad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SavingCategoryCad.aspx.designer.cs">
+      <DependentUpon>SavingCategoryCad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\teste.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>teste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\teste.aspx.designer.cs">
+      <DependentUpon>teste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PowerPoint\ProjectPowerPointCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Database Scripts\change_script_part2.sql" />
+    <None Include="Database Scripts\change_script_part3.sql" />
+    <None Include="Images\vssver2.scc" />
+    <Content Include="packages.config" />
+    <Content Include="PowerPoint\template_Auto.ppt" />
+    <Content Include="PowerPoint\template_Manual.ppt" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Pages\teste.aspx" />
+    <Content Include="Pages\UserMaintenance.aspx" />
+    <Content Include="Pages\UserRegion.aspx" />
+    <Content Include="Pages\RegionCad.aspx" />
+    <Content Include="Pages\ProjectCad.aspx" />
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Weben_US.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{39D0BAE9-0B9E-4927-B65B-51E15A2D7EDD}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Files\" />
+    <Folder Include="PowerPoint\Temp\" />
+    <Folder Include="tempimg\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62929</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ProjectTracker</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
