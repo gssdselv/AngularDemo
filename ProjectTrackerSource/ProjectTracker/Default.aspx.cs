@@ -17,7 +17,7 @@ namespace ProjectTracker
         {
             _log = LogManager.GetLogger(typeof(Logger));
             log4net.Config.XmlConfigurator.Configure();
-
+            //test
             // Fazer login do usuário
             //string userName = Request.ServerVariables["LOGON_USER"];
             string userName = string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? WindowsIdentity.GetCurrent().Name : HttpContext.Current.User.Identity.Name;
