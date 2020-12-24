@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Flex.APT.FrameWork.Contract\Flex.APT.FrameWork.Contract.csproj" />
+    <ProjectReference Include="..\Flex.APT.FrameWork\Flex.APT.FrameWork.csproj" />
+  </ItemGroup>
+
+</Project>
