@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'itcdemi';
+	src: url(../../assets/fonts/ITCAvantGardeStd-Demi.eot) format('embedded-opentype'),
+	url(../../assets/fonts/ITCAvantGardeStd-Demi.eot) format('embedded-opentype'),
+	url(../../assets/fonts/ITCAvantGardeStd-Demi.ttf) format('truetype'),
+	url(../../assets/fonts/ITCAvantGardeStd-Demi.woff) format('woff');
+	font-weight: 400;
+	font-style: normal;
+}

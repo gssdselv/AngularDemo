@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  CLIENT_ID : '0oavtfn4dl23rctdQ0h7',
+  ISSUER : 'https://flexdev.oktapreview.com',
+  ///oauth2/default',
+  // https://flexdev.oktapreview.com
+  LOGIN_REDIRECT_URI : 'http://localhost:4200/callback',
+  LOGOUT_REDIRECT_URI : 'http://localhost:4200/'
 };
 
 /*

@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'fwbico';
+	src: url(../../assets/fonts/fa-brands-400.ttf) format('truetype'),
+	url(../../assets/fonts/fa-brands-400.eot) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+}

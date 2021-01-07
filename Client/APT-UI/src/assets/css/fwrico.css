@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'fwrico';
+	src: url(../../assets/fonts/fa-regular-400.ttf) format('truetype'),
+	url(../../assets/fonts/fa-regular-400.eot) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+}

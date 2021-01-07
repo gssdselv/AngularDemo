@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'itcbold';
+	src: url(../../assets/fonts/ITCAvantGardeStd-Bold.eot) format('embedded-opentype'),
+	url(../../assets/fonts/ITCAvantGardeStd-Bold.otf) format('otf'),
+	url(../../assets/fonts/ITCAvantGardeStd-Bold.eot) format('embedded-opentype'),
+	url(../../assets/fonts/ITCAvantGardeStd-Bold.ttf) format('truetype'),
+	url(../../assets/fonts/ITCAvantGardeStd-Bold.woff) format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
