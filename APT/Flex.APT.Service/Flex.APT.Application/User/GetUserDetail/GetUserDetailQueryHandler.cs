@@ -19,8 +19,7 @@ namespace Flex.APT.Application.User.GetUserDetail
             this.cacheService = cacheService;
         }
         public Task<List<UserDetailDto>> Handle(GetUserQuery request, CancellationToken cancellationToken)
-        {
-            return Task.FromResult(this.cacheService.GetOrCreate("user",() => userRepository.GetUserDetail(request)));
-        }
+            => Task.FromResult(userRepository.GetUserDetail(request));
+        
     }
 }

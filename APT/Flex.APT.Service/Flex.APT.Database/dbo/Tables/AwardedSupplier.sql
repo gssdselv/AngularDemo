@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[AwardedSupplier] (
+    [AwardedSupplierId]         BIGINT             IDENTITY (1, 1) NOT NULL,
+    [ProjectSupplierDetailId]   BIGINT             NOT NULL,
+    [QUOTEID]                   VARCHAR (100)      NULL,
+    [DeltaBestVersusSecondBest] DECIMAL (18)       NULL,
+    [AWARDEDAMOUNT]             DECIMAL (18)       NULL,
+    [ActualSATId]               BIGINT             NOT NULL,
+    [DLOptimizedId]             BIGINT             NOT NULL,
+    [ActualCapexId]             BIGINT             NOT NULL,
+    [InprodRampRate]            BIGINT             NOT NULL,
+    [RecordStatus]              CHAR (1)           NOT NULL,
+    [CreatedBy]                 BIGINT             NOT NULL,
+    [CreatedDate]               DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedBy]                BIGINT             NOT NULL,
+    [ModifiedDate]              DATETIMEOFFSET (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([AwardedSupplierId] ASC),
+    CONSTRAINT [FK_AwardedSupplier_To_ProjectSupplierDetailId] FOREIGN KEY ([ProjectSupplierDetailId]) REFERENCES [dbo].[ProjectSupplierDetail] ([ProjectSupplierDetailId]),
+    CONSTRAINT [FK_AwardedSupplier_To_SupplierScoreCard_ActualCapex] FOREIGN KEY ([ActualCapexId]) REFERENCES [dbo].[SupplierScoreCard] ([SupplierScoreCardId]),
+    CONSTRAINT [FK_AwardedSupplier_To_SupplierScoreCard_ActualSAT] FOREIGN KEY ([ActualSATId]) REFERENCES [dbo].[SupplierScoreCard] ([SupplierScoreCardId]),
+    CONSTRAINT [FK_AwardedSupplier_To_SupplierScoreCard_DLOptimized] FOREIGN KEY ([DLOptimizedId]) REFERENCES [dbo].[SupplierScoreCard] ([SupplierScoreCardId]),
+    CONSTRAINT [FK_AwardedSupplier_To_SupplierScoreCard_Inprod] FOREIGN KEY ([InprodRampRate]) REFERENCES [dbo].[SupplierScoreCard] ([SupplierScoreCardId]),
+    CONSTRAINT [FK_AwardedSupplier_To_User_CreatedBy] FOREIGN KEY ([CreatedBy]) REFERENCES [dbo].[User] ([UserId]),
+    CONSTRAINT [FK_AwardedSupplier_To_user_ModiifiedBy] FOREIGN KEY ([ModifiedBy]) REFERENCES [dbo].[User] ([UserId])
+);
+

@@ -1,4 +1,6 @@
-﻿using Flex.APT.Application.Data_Contract.User;
+﻿using Flex.APT.Application.Data_Contract.Master.Customer;
+using Flex.APT.Application.Data_Contract.User;
+using Flex.APT.Data.Master.Customer;
 using Flex.APT.Data.User;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +15,7 @@ namespace Flex.APT.Data.TypeResolver
         public static IServiceCollection ConfigureGDPNSData(this IServiceCollection services)
         {
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
             return services;
         }
     }
