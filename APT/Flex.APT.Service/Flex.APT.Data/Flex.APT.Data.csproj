@@ -14,4 +14,13 @@
     <ProjectReference Include="..\Flex.APT.Application\Flex.APT.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Master\Category\" />
+    <Folder Include="Master\Country\" />
+    <Folder Include="Master\Region\" />
+    <Folder Include="Master\Segment\" />
+    <Folder Include="Master\Site\" />
+    <Folder Include="Master\SubCategory\" />
+  </ItemGroup>
+
 </Project>
