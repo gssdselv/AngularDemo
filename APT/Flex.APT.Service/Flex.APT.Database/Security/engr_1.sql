@@ -1,3 +1,0 @@
-﻿CREATE SCHEMA [engr]
-    AUTHORIZATION [engr];
-
